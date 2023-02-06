@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ed25cf6ac55ad0c8274549d7125c3f64",
+    "content-hash": "960642b48fdc168da09ad8e80f98c7e1",
     "packages": [
         {
             "name": "brick/math",
@@ -898,6 +898,83 @@
             "time": "2022-10-26T14:07:24+00:00"
         },
         {
+            "name": "irazasyed/telegram-bot-sdk",
+            "version": "v3.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/irazasyed/telegram-bot-sdk.git",
+                "reference": "c4c8250e334e94aab7b6b4a67850e39fd5a9384b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/irazasyed/telegram-bot-sdk/zipball/c4c8250e334e94aab7b6b4a67850e39fd5a9384b",
+                "reference": "c4c8250e334e94aab7b6b4a67850e39fd5a9384b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/guzzle": "^6.5.8 || ^7.4.5",
+                "guzzlehttp/psr7": "^1.9 || ^2.2",
+                "illuminate/support": "5.8 - 9",
+                "league/event": "^2.1",
+                "php": ">=7.3"
+            },
+            "require-dev": {
+                "php-parallel-lint/php-parallel-lint": "^1.3",
+                "phpunit/phpunit": "^9.5"
+            },
+            "suggest": {
+                "illuminate/container": "Hold dependencies to be injected in commands constructors",
+                "irazasyed/larasupport": "Allows you to use any Laravel Package in Lumen by adding support!"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Telegram\\Bot\\Laravel\\TelegramServiceProvider"
+                    ],
+                    "aliases": {
+                        "Telegram": "Telegram\\Bot\\Laravel\\Facades\\Telegram"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Telegram\\Bot\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Syed Irfaq R.",
+                    "email": "syed+gh@lukonet.com",
+                    "homepage": "https://github.com/irazasyed"
+                }
+            ],
+            "description": "The Unofficial Telegram Bot API PHP SDK",
+            "homepage": "https://github.com/irazasyed/telegram-bot-sdk",
+            "keywords": [
+                "laravel",
+                "laravel telegram",
+                "telegram",
+                "telegram bot",
+                "telegram bot api",
+                "telegram php",
+                "telegram sdk"
+            ],
+            "support": {
+                "issues": "https://github.com/irazasyed/telegram-bot-sdk/issues",
+                "source": "https://github.com/irazasyed/telegram-bot-sdk/tree/v3.9"
+            },
+            "time": "2022-08-02T19:46:39+00:00"
+        },
+        {
             "name": "laravel/framework",
             "version": "v9.50.2",
             "source": {
@@ -1467,51 +1544,35 @@
             "time": "2022-12-11T20:36:23+00:00"
         },
         {
-            "name": "league/container",
-            "version": "4.2.0",
+            "name": "league/event",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/thephpleague/container.git",
-                "reference": "375d13cb828649599ef5d48a339c4af7a26cd0ab"
+                "url": "https://github.com/thephpleague/event.git",
+                "reference": "d2cc124cf9a3fab2bb4ff963307f60361ce4d119"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/container/zipball/375d13cb828649599ef5d48a339c4af7a26cd0ab",
-                "reference": "375d13cb828649599ef5d48a339c4af7a26cd0ab",
+                "url": "https://api.github.com/repos/thephpleague/event/zipball/d2cc124cf9a3fab2bb4ff963307f60361ce4d119",
+                "reference": "d2cc124cf9a3fab2bb4ff963307f60361ce4d119",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2 || ^8.0",
-                "psr/container": "^1.1 || ^2.0"
-            },
-            "provide": {
-                "psr/container-implementation": "^1.0"
-            },
-            "replace": {
-                "orno/di": "~2.0"
+                "php": ">=5.4.0"
             },
             "require-dev": {
-                "nette/php-generator": "^3.4",
-                "nikic/php-parser": "^4.10",
-                "phpstan/phpstan": "^0.12.47",
-                "phpunit/phpunit": "^8.5.17",
-                "roave/security-advisories": "dev-latest",
-                "scrutinizer/ocular": "^1.8",
-                "squizlabs/php_codesniffer": "^3.6"
+                "henrikbjorn/phpspec-code-coverage": "~1.0.1",
+                "phpspec/phpspec": "^2.2"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.x-dev",
-                    "dev-4.x": "4.x-dev",
-                    "dev-3.x": "3.x-dev",
-                    "dev-2.x": "2.x-dev",
-                    "dev-1.x": "1.x-dev"
+                    "dev-master": "2.2-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "League\\Container\\": "src"
+                    "League\\Event\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1520,33 +1581,21 @@
             ],
             "authors": [
                 {
-                    "name": "Phil Bennett",
-                    "email": "mail@philbennett.co.uk",
-                    "role": "Developer"
+                    "name": "Frank de Jonge",
+                    "email": "info@frenky.net"
                 }
             ],
-            "description": "A fast and intuitive dependency injection container.",
-            "homepage": "https://github.com/thephpleague/container",
+            "description": "Event package",
             "keywords": [
-                "container",
-                "dependency",
-                "di",
-                "injection",
-                "league",
-                "provider",
-                "service"
+                "emitter",
+                "event",
+                "listener"
             ],
             "support": {
-                "issues": "https://github.com/thephpleague/container/issues",
-                "source": "https://github.com/thephpleague/container/tree/4.2.0"
+                "issues": "https://github.com/thephpleague/event/issues",
+                "source": "https://github.com/thephpleague/event/tree/master"
             },
-            "funding": [
-                {
-                    "url": "https://github.com/philipobenito",
-                    "type": "github"
-                }
-            ],
-            "time": "2021-11-16T10:29:06+00:00"
+            "time": "2018-11-26T11:52:41+00:00"
         },
         {
             "name": "league/flysystem",
@@ -2189,157 +2238,6 @@
                 }
             ],
             "time": "2022-12-20T19:00:15+00:00"
-        },
-        {
-            "name": "nutgram/hydrator",
-            "version": "3.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nutgram/hydrator.git",
-                "reference": "7ca00bfb673cb2592d2e33158f6402cf35f1205d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nutgram/hydrator/zipball/7ca00bfb673cb2592d2e33158f6402cf35f1205d",
-                "reference": "7ca00bfb673cb2592d2e33158f6402cf35f1205d",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.0",
-                "psr/container": "^1.1 || ^2.0"
-            },
-            "require-dev": {
-                "league/container": "^4.2",
-                "phpunit/phpunit": "~9.5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "SergiX44\\Hydrator\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sergio Brighenti",
-                    "email": "sergio@brighenti.me",
-                    "homepage": "https://github.com/SergiX44"
-                },
-                {
-                    "name": "Anatoly Fenric",
-                    "email": "afenric@gmail.com",
-                    "homepage": "https://github.com/fenric"
-                }
-            ],
-            "description": "Hydrator for PHP 8.0+",
-            "homepage": "https://github.com/nutgram/hydrator",
-            "keywords": [
-                "data-mapper",
-                "dto",
-                "hydrator",
-                "jsonmapper",
-                "mapper",
-                "php8"
-            ],
-            "support": {
-                "issues": "https://github.com/nutgram/hydrator/issues",
-                "source": "https://github.com/nutgram/hydrator/tree/3.0.0"
-            },
-            "time": "2022-11-14T23:10:22+00:00"
-        },
-        {
-            "name": "nutgram/nutgram",
-            "version": "3.11.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nutgram/nutgram.git",
-                "reference": "b3d355e1b816cb2972fb53adc99d753c8980e3f2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nutgram/nutgram/zipball/b3d355e1b816cb2972fb53adc99d753c8980e3f2",
-                "reference": "b3d355e1b816cb2972fb53adc99d753c8980e3f2",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "guzzlehttp/guzzle": "^7.2",
-                "illuminate/macroable": "^8.0|^9.0|^10.0",
-                "laravel/serializable-closure": "^1.2",
-                "league/container": "^4.2",
-                "nutgram/hydrator": "^3.0",
-                "php": ">=8.0",
-                "psr/log": "^1.0|^2.0|^3.0",
-                "psr/simple-cache": "^1.0|^2.0|^3.0"
-            },
-            "require-dev": {
-                "ext-reflection": "*",
-                "illuminate/testing": "^8.0|^9.0|^10.0",
-                "netresearch/jsonmapper": "^4.0.0",
-                "orchestra/testbench": "^6.0|^7.0|^8.0",
-                "pestphp/pest": "^1.1",
-                "pestphp/pest-plugin-mock": "^1.0",
-                "roave/security-advisories": "dev-latest",
-                "vimeo/psalm": "^4.11"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "SergiX44\\Nutgram\\NutgramServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "SergiX44\\Nutgram\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sergio Brighenti",
-                    "email": "sergio@brighenti.me",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Luca Patera",
-                    "email": "lucapatera@outlook.it",
-                    "role": "Developer"
-                }
-            ],
-            "description": "The Telegram bot library that doesn't drive you nuts",
-            "homepage": "https://github.com/SergiX44/Nutgram",
-            "keywords": [
-                "api",
-                "bot",
-                "framework",
-                "laravel",
-                "library",
-                "nutgram",
-                "telegram"
-            ],
-            "support": {
-                "issues": "https://github.com/nutgram/nutgram/issues",
-                "source": "https://github.com/nutgram/nutgram/tree/3.11.2"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/Lukasss93",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/SergiX44",
-                    "type": "github"
-                }
-            ],
-            "time": "2023-01-23T22:31:20+00:00"
         },
         {
             "name": "phpoption/phpoption",
